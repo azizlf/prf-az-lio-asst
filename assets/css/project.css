@@ -1,0 +1,432 @@
+.c-inx-project {
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    overflow-y: auto;
+
+}
+
+.c-inx-project::-webkit-scrollbar {
+    width: 0.7vw;
+}
+
+.c-inx-project::-webkit-scrollbar-track {
+    background: #353841;
+    border-radius: 1vw;
+    border: 0.1vw solid var(--theme-button-color);
+}
+
+.c-inx-project::-webkit-scrollbar-thumb {
+    background: var(--theme-button-color);
+    border-radius: 1vw;
+    border: 0.1vw solid #353841;
+}
+
+.c-inx-project .returnbtn {
+
+    width: 30%;
+    font-size: 1.3vw;
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+
+}
+
+.c-inx-project .returnbtn i {
+
+    margin-right: 2%;
+    transition: 0.1s;
+
+}
+
+.c-inx-project .returnbtn:hover {
+
+    transform: translateX(-1%);
+    color: var(--theme-button-color);
+
+}
+
+.c-inx-project .returnbtn:hover i {
+
+    transform: translateX(-7%);
+
+}
+
+
+.cover-project {
+
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.cover-project .cvr {
+
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #0f1015d6 70%, #060918 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cover-project .cvr .description {
+
+    width: 90%;
+    position: absolute;
+    padding: 1%;
+    bottom: 12%;
+    left: 2%;
+    color: white;
+
+}
+
+.cover-project .cvr .description .date {
+
+    font-size: 1.2vw;
+    color: var(--theme-button-color);
+
+}
+
+.cover-project .cvr .description .title {
+
+    font-size: 4.5vw;
+    margin-bottom: 0.5%;
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+.cover-project .cvr .description p {
+
+    font-size: 1.2vw;
+    line-height: 2.5vw;
+    width: 60%;
+    margin-bottom: 3%;
+
+}
+
+.cover-project .cvr .description span {
+
+    font-size: 1.1vw;
+    color: var(--theme-button-color);
+    font-weight: 800;
+
+}
+
+.cover-project .cvr .description .hr {
+
+    width: 100%;
+    padding: 0.05% 0;
+    background-image: linear-gradient(to right, white -160%, transparent 80%);
+    margin: 3% 0;
+    margin-top: 2%;
+
+}
+
+.cover-project .cvr .description button {
+
+    padding: 1.3% 3%;
+    background-color: transparent;
+    color: var(--theme-button-color);
+    border: 0.1vw solid var(--theme-button-color);
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 0.4vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+
+}
+
+.cover-project .cvr .description button:hover {
+
+    background-color: var(--theme-button-color);
+    color: #0E0F11;
+
+}
+
+.cover-project .cvr .to-bottom-btn {
+
+    padding: 0.8% 1.1%;
+    font-size: 1.2vw;
+    color: white;
+    border: 0.1vw solid white;
+    position: absolute;
+    border-radius: 100%;
+    bottom: 5%;
+    animation: bounce 0.9s infinite ease-in-out;
+    cursor: pointer;
+    transition: 0.2s;
+
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-17%);
+    }
+}
+
+.cover-project .cvr .to-bottom-btn:hover {
+
+    border-color: var(--theme-button-color);
+    color: var(--theme-button-color);
+
+}
+
+.video-container {
+
+    width: 85.3%;
+    padding: 24% 0;
+    position: relative;
+    margin: 2% 7%;
+    scale: 0.9;
+    margin-top: 4%;
+
+}
+
+.video-container iframe {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+
+}
+
+
+.cover-project .cvr .description button.gl {
+
+    display: none;
+
+}
+
+.to-top-btn {
+
+    padding: 0.8% 1.1%;
+    font-size: 1.2vw;
+    color: white;
+    border: 0.1vw solid white;
+    position: fixed;
+    border-radius: 100%;
+    bottom: 5%;
+    right: 2%;
+    animation: bounce 0.9s infinite ease-in-out;
+    cursor: pointer;
+    transition: 0.2s;
+    z-index: 21857321894723986;
+
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-17%);
+    }
+}
+
+.to-top-btn:hover {
+
+    border-color: var(--theme-button-color);
+    color: var(--theme-button-color);
+
+}
+
+@media (max-width:910px) {
+
+    .c-inx-project::-webkit-scrollbar {
+
+        width: 0vw;
+
+    }
+
+    .video-container{
+        display: none;
+    }
+
+    .c-inx-project .returnbtn {
+        width: 61%;
+        font-size: 4vw;
+        color: white;
+        position: absolute;
+        top: 5%;
+        left: 33%;
+        display: flex;
+        align-items: center;
+        transition: 0.2s;
+    }
+
+    .c-inx-project .returnbtn i {
+
+        margin-right: 5%;
+
+    }
+
+    .images-container {
+        display: none;
+    }
+
+    .cover-project .cvr .to-bottom-btn {
+        display: none;
+    }
+
+    .cover-project .cvr .description {
+        width: 90%;
+        position: absolute;
+        padding: 1%;
+        bottom: auto;
+        left: 2%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cover-project .cvr .description .date {
+        font-size: 4vw;
+    }
+
+    .cover-project .cvr .description .title {
+        font-size: 9vw;
+    }
+
+    .cover-project .cvr .description p {
+        font-size: 4.7vw;
+        line-height: 7vw;
+        width: 95%;
+        margin-bottom: 3%;
+        text-align: center;
+    }
+
+    .cover-project .cvr .description span {
+        font-size: 4vw;
+    }
+
+    .cover-project .cvr .description button {
+        padding: 4% 12%;
+        background-color: transparent;
+        color: var(--theme-button-color);
+        border: 0.1vw solid var(--theme-button-color);
+        cursor: pointer;
+        transition: 0.2s;
+        border-radius: 2vw;
+        font-size: 5vw;
+        font-weight: 600;
+    }
+
+    .cover-project .cvr .description .hr {
+
+        opacity: 0;
+
+    }
+
+
+    .cover-project .cvr .description button.gl {
+
+        display: block;
+        margin-top: 5%;
+
+    }
+
+    .images-slider-mobile {
+
+        width: 180%;
+        height: 100%;
+        background-color: #00000087;
+        position: fixed;
+        top: -1%;
+        left: -40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        rotate: 90deg;
+
+    }
+
+    .images-slider-mobile .images {
+
+        width: 85%;
+        scale: 0.9;
+
+    }
+
+    .images-slider-mobile .image {
+
+        width: 100%;
+        padding: 28% 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 3vw;
+
+    }
+
+    .images-slider-mobile .btns {
+
+        width: 96%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        padding: 1% 0;
+
+    }
+
+    .images-slider-mobile .btns .btn {
+
+        width: 8.3%;
+        padding: 1% 0;
+        border: 0.7vw solid white;
+        border-radius: 100%;
+        font-size: 8vw;
+        color: white;
+        text-align: center;
+        z-index: 1245245;
+
+    }
+
+    .images-slider-mobile .btns .btn:active {
+
+        background-color: var(--theme-button-color);
+        border-color: var(--theme-button-color);
+
+    }
+
+
+    .images-slider-mobile .closebtn {
+        color: white;
+        font-size: 6vw;
+        position: absolute;
+        top: 25%;
+        right: 4%;
+        z-index: 2142151253243;
+    }
+
+
+
+
+}

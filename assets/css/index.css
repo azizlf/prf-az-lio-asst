@@ -1,0 +1,893 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poetsen+One&display=swap');
+@import url("./c-inx.css");
+@import url("./project.css");
+
+:root {
+
+    --theme-color: #FFD700;
+    --theme-button-color: #DAA520;
+
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: "Nunito", sans-serif;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #060918;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input,
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+.swiper-wrapper {
+
+    height: auto !important;
+
+}
+
+.ltr {
+
+    opacity: 0;
+    transition: 1s;
+    font-size: 9vw;
+
+}
+
+
+.c-inx-app {
+
+    width: 99.6%;
+    height: 98%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    margin: 0.5% 0;
+    user-select: none !important;
+    
+}
+
+.c-inx-app::-webkit-scrollbar {
+    width: 0.7vw;
+}
+
+.c-inx-app::-webkit-scrollbar-track {
+    background: #353841;
+    border-radius: 1vw;
+    border: 0.1vw solid var(--theme-button-color);
+}
+
+.c-inx-app::-webkit-scrollbar-thumb {
+    background: var(--theme-button-color);
+    border-radius: 1vw;
+    border: 0.1vw solid #353841;
+}
+
+.c-inx-app .navbar {
+
+    width: 93%;
+    position: fixed;
+    padding: 1%;
+    border-radius: 10000vw;
+    border: 0.1vw solid #353841;
+    background-color: #06091899;
+    backdrop-filter: blur(0.4vw);
+    z-index: 124125;
+    margin: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+
+}
+
+.c-inx-app .navbar .menu {
+
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.c-inx-app .navbar .menu .item {
+
+    margin: 0 2%;
+    font-size: 1.2vw;
+    transition: 0.2s;
+    cursor: pointer;
+
+}
+
+.c-inx-app .navbar .menu .item:hover {
+
+    color: var(--theme-color);
+
+}
+
+
+.c-inx-app .navbar .logo {
+
+    font-size: 2.4vw;
+    font-family: "Bebas Neue", sans-serif;
+    margin-left: 0.5%;
+    cursor: pointer;
+    color: var(--theme-button-color);
+
+}
+
+.c-inx-app .navbar button {
+
+    padding: 1% 1.5%;
+    font-size: 1.2vw;
+    border-radius: 10000vw;
+    border: 0.1vw solid var(--theme-button-color);
+    background-color: transparent;
+    color: var(--theme-button-color);
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 700;
+
+}
+
+.c-inx-app .navbar button:hover {
+
+    background-color: var(--theme-button-color);
+    color: #060918;
+
+}
+
+.cursor {
+
+    position: fixed;
+    border: 0.1vw solid white;
+    border-radius: 100%;
+    z-index: 9438527;
+    top: 2%;
+    left: 2%;
+    width: 2%;
+    padding: 1% 0;
+    transition: transform 3s ease, width 3s ease, height 3s ease, border 2s ease;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: -0.9%;
+    margin-left: -1%;
+    pointer-events: none;
+    box-shadow: 0 0 5vw 0 #0d1334;
+
+}
+
+.cursor div {
+
+    width: 20%;
+    padding: 10% 0;
+    background-color: white;
+    border-radius: 100%;
+    position: absolute;
+    transition: 2s;
+
+}
+
+.loader-rt-cs {
+    border: 0.3vw solid #f3f3f3;
+    border-top: 0.3vw solid var(--theme-button-color);
+    border-radius: 50%;
+    width: 1.5%;
+    padding: 0.75% 0;
+    animation: spin 1.3s linear infinite;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1243;
+    box-shadow: 0 0 5vw 0 #0d1334;
+    margin-top: -1.5%;
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.vld-rt-cs {
+    border-radius: 50%;
+    width: 2%;
+    padding: 1% 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 21397483219;
+    box-shadow: 0 0 10vw 0 #49e849;
+    background-color: #15a815;
+    color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+    margin-top: -1.5%;
+    transition: transform 2s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.vld-rt-cs i {
+
+    position: absolute;
+
+}
+
+.navbar-mobile,
+.side-bar {
+    display: none;
+}
+
+.footer {
+
+    width: 95.3%;
+    padding: 1% 0;
+    border-radius: 1vw;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3% 2.2%;
+    margin-top: 0%;
+    font-size: 1.5vw;
+
+}
+
+.footer span {
+
+    padding: 0 0.5%;
+    color: var(--theme-button-color);
+
+}
+
+.footer i {
+
+    padding: 0 0.5%;
+
+}
+
+.loader-page {
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #06091899;
+    backdrop-filter: blur(1vw);
+    z-index: 21474893217483912;
+    cursor: default !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: top 3.5s;
+    top: 0;
+    left: 0;
+
+}
+
+
+.loader-page .logo {
+
+    font-size: 8vw;
+    color: var(--theme-color);
+    font-weight: 600;
+    animation: loading 1s infinite alternate linear;
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+
+@keyframes loading {
+    0% {
+        opacity: 0.3;
+    }
+}
+
+.whatsapp-btn {
+
+    width: 4.4%;
+    padding: 0.9% 0;
+    font-size: 2.5vw;
+    border: 0.1vw solid #ffffff74;
+    background-color: #0d163d69;
+    backdrop-filter: blur(2vw);
+    border-radius: 100%;
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    z-index: 124213;
+    color: #ffffffa2;
+    text-align: center;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.whatsapp-btn:hover {
+
+    background-color: #1db92ab1;
+    color: white;
+    border-color: #1db92ab1;
+
+}
+
+.whatsapp-btn:active {
+
+    scale: 0.95;
+
+}
+
+
+
+@media (max-width:910px) {
+
+    .loader-page .logo {
+        font-size: 16vw;
+    }
+
+    .footer {
+        width: 95.3%;
+        padding: 1% 0;
+        border-radius: 1vw;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 4% 2.2%;
+        margin-top: 4%;
+        font-size: 3vw;
+    }
+
+    .navbar {
+
+        display: none !important;
+
+    }
+
+    .navbar-mobile {
+        width: 93%;
+        position: fixed;
+        padding: 4% 1%;
+        border-radius: 10000vw;
+        border: 0.1vw solid #353841;
+        background-color: #06091899;
+        backdrop-filter: blur(0.4vw);
+        z-index: 124125;
+        margin: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+    }
+
+    .navbar-mobile.active {
+
+        border-color: transparent;
+        background-color: transparent;
+
+    }
+
+
+    .navbar-mobile .logo {
+
+        font-size: 5vw;
+        color: var(--theme-button-color);
+        margin-left: 3%;
+
+    }
+
+    .navbar-mobile .sd-menu-btn {
+
+        font-size: 3vw;
+        margin-right: 3%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+        width: 10%;
+
+    }
+
+    .navbar-mobile .sd-menu-btn div {
+
+        width: 90%;
+        padding: 0.1% 0;
+        background-color: white;
+        margin: 14% 0;
+        transition: 0.2s;
+
+    }
+
+    .navbar-mobile .sd-menu-btn div.tp {
+
+        width: 80%;
+        animation: tpAnim 1s infinite alternate linear;
+
+    }
+
+    .navbar-mobile .sd-menu-btn div.ct {
+
+        width: 80%;
+        animation: ctAnim 1.4s infinite alternate linear;
+
+    }
+
+    .navbar-mobile .sd-menu-btn div.bt {
+
+        width: 80%;
+        animation: btAnim 1.8s infinite alternate linear;
+
+    }
+
+    @keyframes ctAnim {
+
+        0% {
+            width: 100%;
+        }
+
+    }
+
+    @keyframes btAnim {
+
+        0% {
+            width: 100%;
+        }
+
+    }
+
+    @keyframes tpAnim {
+
+        0% {
+            width: 100%;
+        }
+
+    }
+
+
+    .navbar-mobile .sd-menu-btn.active div.ct {
+
+        opacity: 0;
+
+    }
+
+    .navbar-mobile .sd-menu-btn.active div.tp {
+
+        animation: tp 1s infinite alternate linear;
+        rotate: -46deg;
+        transform: translateX(-44%);
+        margin-right: -33%;
+        width: 100%;
+
+    }
+
+    .navbar-mobile .sd-menu-btn.active div.bt {
+
+        animation: bt 1s infinite alternate linear;
+        rotate: 45deg;
+        transform: translateX(-30%);
+        margin-right: -27%;
+        width: 100%;
+
+    }
+
+    .side-bar {
+
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #060918b3;
+        backdrop-filter: blur(4vw);
+        top: 0;
+        left: 0;
+        z-index: 124052;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: 0.2s;
+
+    }
+
+    .side-bar .item {
+
+        width: 90%;
+        text-align: center;
+        margin: 6% 0;
+        font-size: 5vw;
+        color: white;
+
+    }
+
+    .side-bar .hr {
+
+        width: 80%;
+        padding: 0.01% 0;
+        background-color: #ffffff58;
+        margin: 2% 0;
+        margin-bottom: 10%;
+
+    }
+
+    .side-bar button {
+
+        font-size: 5vw;
+        border: 0.3vw solid transparent;
+        border-radius: 2vw;
+        background-color: var(--theme-button-color);
+        color: #101115;
+        width: 50%;
+        padding: 4% 0;
+
+    }
+
+    .side-bar button:hover {
+
+        color: var(--theme-button-color);
+        border-color: var(--theme-button-color);
+        background-color: transparent;
+
+    }
+
+    .cursor,
+    .loader-rt-cs,
+    .vld-rt-cs {
+        display: none;
+    }
+
+    .c-inx-app {
+        height: 100%;
+        margin: 0;
+    }
+
+    .c-inx-app::-webkit-scrollbar {
+        width: 0vw;
+    }
+
+    .c-inx-app .cover-page {
+        width: 100%;
+        height: 70%;
+        border-radius: 0vw;
+        margin: 0;
+        margin-bottom: -3%;
+    }
+
+    .c-inx-app .cover-page .cvr .title {
+        font-size: 17vw;
+        margin-bottom: 11%;
+        line-height: 22vw;
+        position: absolute;
+        bottom: 2%;
+        height: 85%;
+    }
+
+    .c-inx-app .cover-page .cvr .title div {
+
+        height: 20%;
+
+    }
+
+    .c-inx-app .cover-page .cvr .title #t1-anim {
+
+        height: 40%;
+
+    }
+
+    .c-inx-app .cover-page .cvr .title .ltr {
+        font-size: 17vw;
+    }
+
+    .c-inx-app .section .flex {
+        flex-direction: column;
+    }
+
+    .c-inx-app .section .image {
+        width: 92%;
+    }
+
+    .c-inx-app .section .description {
+        width: 95%;
+        padding: 2% 0;
+        margin-right: 0%;
+        color: white;
+        font-size: 9vw;
+        text-align: center;
+    }
+
+    .c-inx-app .section .description p {
+        font-size: 5vw;
+        line-height: 9vw;
+        font-weight: 300;
+    }
+
+    .c-inx-app .section .section-title {
+        font-size: 16vw;
+        margin-bottom: -1%;
+    }
+
+    .c-inx-app .section .section-sb-title {
+        font-size: 4vw;
+        width: 90%;
+        line-height: 6vw;
+        margin-bottom: 5%;
+    }
+
+    .c-inx-app .section .grid .serv {
+        width: 94%;
+        padding: 80% 0;
+        border-radius: 3vw;
+        border-color: #12205f;
+        margin: 0 2.5%;
+        margin-bottom: 7%;
+    }
+
+    .c-inx-app .section .grid .serv .ctn img {
+        width: 69%;
+    }
+
+    .c-inx-app .section .grid .serv .ctn .title {
+        font-size: 7vw;
+    }
+
+    .c-inx-app .section .grid .serv .ctn p {
+        font-size: 4.5vw;
+        font-weight: 300;
+        line-height: 7vw;
+    }
+
+    .c-inx-app .section .grid .serv .ctn button {
+        font-size: 4vw;
+        border-radius: 1vw;
+    }
+
+    .c-inx-app .section .grid .sc {
+        flex-direction: column;
+    }
+
+    .c-inx-app .section .grid .box {
+        width: 77%;
+        padding: 5% 2%;
+        margin-bottom: 15%;
+        border-radius: 3vw;
+        border-color: #12205f;
+    }
+
+    .c-inx-app .section .grid .box .title {
+        font-size: 9vw;
+    }
+
+    .c-inx-app .section .grid .box .prog {
+        width: 85%;
+        border-radius: 10vw;
+    }
+
+    .c-inx-app .section .grid .box .prog div {
+        border-radius: 10vw;
+        padding: 0.9% 0;
+    }
+
+
+    .c-inx-app .section .grid .project {
+        width: 99%;
+        padding: 77% 0;
+        border-radius: 3vw;
+    }
+
+    .c-inx-app .section .grid .projects-slider {
+
+        width: 93%;
+        margin-bottom: 21%;
+
+    }
+
+    .c-inx-app .section .header-section {
+
+        display: none;
+
+    }
+
+    .ttl-mobile-proj {
+        display: block;
+    }
+
+    .c-inx-app .section .btns {
+
+        bottom: 1%;
+        right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: auto;
+    }
+
+    .c-inx-app .section .btns button {
+        width: 35%;
+        padding: 7.5% 2%;
+        border: .1vw solid #72727246;
+        font-size: 7vw;
+        margin: 0 5%;
+        border-radius: 100%;
+        cursor: pointer;
+        background-color: transparent;
+        color: white;
+        transition: .3s;
+    }
+
+    .c-inx-app .section .grid .project .ctn .title {
+
+        font-size: 8vw;
+
+    }
+
+    .c-inx-app .section .grid .project .ctn p {
+        font-size: 4vw;
+        line-height: 7vw;
+    }
+
+    .c-inx-app .section .grid .project .btn {
+        width: 70%;
+        padding: 4% 0;
+        border-radius: 3vw;
+    }
+
+    .c-inx-app .section .grid .project .btn p {
+        font-size: 5vw;
+    }
+
+    .c-inx-app .section .flex-ft {
+        flex-direction: column;
+    }
+
+    .c-inx-app .section .flex-ft .desc {
+        width: 99%;
+        padding: 51% 0;
+        border-radius: 8vw;
+        border-top-left-radius: 6vw;
+        border-top-right-radius: 6vw;
+        margin-bottom: 5%;
+    }
+
+    .c-inx-app .section .flex-ft .desc .cvr {
+        width: 99.8%;
+        border-radius: 6vw;
+    }
+
+    .c-inx-app .section .flex-ft .desc .cvr .ttl {
+        font-size: 8vw;
+        width: 99%;
+    }
+
+    .c-inx-app .section .flex-ft .desc .cvr img {
+        width: 49%;
+    }
+
+    .c-inx-app .section .flex-ft .desc .cvr .scr .tx {
+        font-size: 4vw;
+    }
+
+    .c-inx-app .section .flex-ft .desc .cvr .scr {
+        width: 82%;
+    }
+
+    .c-inx-app .section .flex-ft .desc .cvr .scr .hr {
+        width: 33%;
+        padding: 0.05% 0;
+    }
+
+    .c-inx-app .section .flex-ft .desc .cvr .flex-social .scl {
+        width: 25.5%;
+        padding: 5% 0;
+        font-size: 6vw;
+    }
+
+    .c-inx-app .section .flex-ft .form {
+        width: 90%;
+        padding: 7% 4%;
+        border-radius: 4vw;
+    }
+
+    .c-inx-app .section .flex-ft .form .input input,
+    .c-inx-app .section .flex-ft .form .input textarea {
+        width: 89%;
+        padding: 5% 5%;
+        font-size: 4vw;
+        border-radius: 2vw;
+        border-width: 0.55vw;
+    }
+
+    .c-inx-app .section .flex-ft .form .input .lbl {
+        font-size: 4vw;
+    }
+
+    .c-inx-app .section .flex-ft .form .input input:focus+.lbl,
+    .c-inx-app .section .flex-ft .form .input input:not(:placeholder-shown)+.lbl {
+
+        top: -15%;
+        font-size: 3vw;
+
+    }
+
+
+    .c-inx-app .section .flex-ft .form .input textarea:focus+.lbl,
+    .c-inx-app .section .flex-ft .form .input textarea:not(:placeholder-shown)+.lbl {
+
+        top: -3%;
+        font-size: 3vw;
+
+    }
+
+    .c-inx-app .section .flex-ft .form .button {
+        font-size: 5vw;
+        border-radius: 3vw;
+        padding: 4% 0;
+    }
+
+    .c-inx-app .section .flex-ft .form .select {
+        border-radius: 2vw;
+    }
+
+    .c-inx-app .section .flex-ft .form .select .title,
+    .c-inx-app .section .flex-ft .form .select i {
+        font-size: 4vw;
+    }
+
+    .c-inx-app .section .flex-ft .form .drop {
+        border-radius: 1.6vw;
+        width: 92%;
+        left: 3.5%;
+        height: 45%;
+    }
+
+    .c-inx-app .section .flex-ft .form .drop .list .item {
+        font-size: 4vw;
+        border-radius: 2vw;
+    }
+
+    .c-inx-app .section .flex-ft .form .drop .list::-webkit-scrollbar {
+        width: 2vw;
+    }
+
+    .whatsapp-btn {
+        display: none;
+    }
+
+    .c-inx-app .section .flex-ft .desc .cvr .flex-social .scl.whats{
+        display: block;
+    }
+
+
+}

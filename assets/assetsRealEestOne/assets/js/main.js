@@ -356,17 +356,40 @@ setTimeout(() => {
                 speed: 1.5,
             },
         }).mount(window.splide.Extensions);
-    };
-
+    }
 
     // featured properties slider
     new Swiper(".ul-featured-properties-slider", {
-        slidesPerView: 3,
         loop: true,
         autoplay: false,
+        pagination: {
+            el: ".ul-features-slider-pagination",
+            type: "progressbar",
+        },
         navigation: {
             nextEl: ".ul-featured-properties-slider-nav .next",
             prevEl: ".ul-featured-properties-slider-nav .prev",
+        },
+        breakpoints: {
+            480: {
+                slidesPerView: 2,
+            },
+            576: {
+                spaceBetween: 15,
+                slidesPerView: 3,
+            },
+            1200: {
+                spaceBetween: 20,
+                slidesPerView: 3,
+            },
+            1680: {
+                slidesPerView: 3,
+                spaceBetween: 26,
+            },
+            1700: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
         }
     });
 

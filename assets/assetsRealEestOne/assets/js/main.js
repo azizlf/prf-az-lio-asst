@@ -1,10 +1,4 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-    // preloader
-    const preloader = document.getElementById('preloader');
-    preloader.style.display = 'none';
-    document.body.style.position = 'static';
-
-    // HEADER NAV IN MOBILE
+setTimeout(() => {
     if (document.querySelector(".ul-header-nav")) {
         const ulSidebar = document.querySelector(".ul-sidebar");
         const ulSidebarOpener = document.querySelector(".ul-header-sidebar-opener");
@@ -233,7 +227,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // project search filters
     const projectSearchFiltersExpandBtn = document.querySelector(".ul-projects-search-filters-expand-btn");
     if (projectSearchFiltersExpandBtn) {
-        projectSearchFiltersExpandBtn.addEventListener("click", function() {
+        projectSearchFiltersExpandBtn.addEventListener("click", function () {
             document.querySelector(".ul-projects-search-filters").classList.toggle("expanded");
         })
     }
@@ -320,7 +314,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         pagination: {
             el: ".ul-banner-slider-pagination",
             clickable: true,
-            renderBullet: function(index, className) {
+            renderBullet: function (index, className) {
                 const slideNumber = String(index + 1).padStart(2, '0'); // Format to '01', '02', etc.
                 return `<span class="${className}">${slideNumber}</span>`;
             },
@@ -436,4 +430,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
             }
         }
     });
-});
+}, 2000);
